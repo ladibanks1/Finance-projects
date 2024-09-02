@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 300px 2fr;
+  font-family: "Inter", sans-serif;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  background-color: #2e2e2e;
+  color: #c9c9c9;
+  position: relative;
+}
+aside .bottom-menu {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.logo {
+  margin-left: 30px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  padding: 15px 30px;
+  border-width: 5px;
+}
+li > i {
+  margin-right: 20px;
+}
+.fa-arrow-down {
+  margin-right: 16px;
+}
+.fa-sack-dollar {
+  margin-right: 23px;
+}
+li:hover {
+  background-color: #ffffff;
+  color: #2e2e2e;
+  border-left: 5px solid #009e35;
+  margin-right: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  i {
+    color: #009e35;
+  }
+}
+main {
+  background-color: #fff6d1;
+  padding: 10px 30px;
+}
+.top-overview {
+  display: flex;
+  flex-direction: row;
+}
+.top-overview > div {
+  padding: 10px;
+  width: 100%;
+  border-radius: 20px;
+  margin-right: 15px;
+  background-color: #2e2e2e;
+  color: white;
+}
+.top-overview > div:not(.current-balance) {
+  background-color: white;
+  margin: 0 15px;
+  color: black;
+}
+.top-overview > div p:nth-child(2) {
+  font-weight: 800;
+}
+.top-overview > div p:nth-child(1) {
+  font-size: 12px;
+}
+.lower-content {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-areas:
+    "pots  budgets"
+    "trans budgets"
+    "trans bill";
+  margin-top: 20px;
+}
+.pots {
+  grid-area: pots;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  padding: 20px;
+}
+.transactions {
+  grid-area: trans;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 20px;
+  color: #2e2e2e;
+}
+.budgets {
+  grid-area: budgets;
+  background-color: #FFFFFF;
+  margin-left: 20px;
+  border-radius: 15px;
+  padding: 0  20px;
+}
+.recurring-bills {
+  grid-area: bill;
+  background-color: #FFFFFF;
+  margin-left: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+.pots > section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.pots > article {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+.pots-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 50%;
+}
+.pots-item p:first-child {
+  font-size: 12px;
+  margin: 4px 0;
+}
+.pots-item p:not(p:first-child) {
+  font-size: 14px;
+  font-weight: 800;
+  margin: 4px 0;
+}
+.pots-total {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background-color: #F8F5F0;
+  width: 40%;
+  padding: 10px 0 10px 20px;
+  border-radius: 10px;
+}
+.pots-total i {
+  color: #5d827d;
+}
+.pots-total span {
+  color: #5e5e5e;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+}
+.pots-total p {
+    font-weight: 900;
+    font-size: 20px;
+    margin: 7px 0;
+}
+.pots-item article p{
+    padding-left: 10px;
+}
+.pots-item article{
+    border-left:3px solid #39716D;
+}
+
+/* TRANSACTIONS */
+.transactions > article {
+    display: flex;
+    justify-content: space-between;
+}
+.transactions div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+    border-bottom: 1px solid #eeeefc ;
+    p{
+        margin:9px 0;
+        font-size: 12px;
+        text-align: end;
+    }
+}
+.transactions article:not(:first-child) span{
+    margin-left: 30px;
+    font-weight: 800;   
+}
+.transactions article:first-child{
+    font-weight: 600;
+}
+/* Bills */
+.recurring-bills > article {
+    display: flex;
+    justify-content: space-between;
+}
+.recurring-bills div{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F8F5F0;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-left: 5px solid #39716D;
+}
+/* Budgets */
+.budgets > article {
+    display: flex;
+    justify-content: space-between;
+    p:first-child{
+        font-weight: 700;
+    };
+    p:last-child{
+        font-size: 14px;
+    };
+}
+.budgets section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.budgets section > article p:first-child{
+    color: #5e5e5e;
+    font-weight: 700;
+    font-size: 14px;
+}
+.budgets section > article p:last-child{
+    font-weight: 700;
+}
+.budgets section > article > div{
+    border-left: 3px solid green;
+    padding-left: 20px;
+}
